@@ -89,22 +89,24 @@ if test >= 5 and test <= 1000:
 
 
 
-
+        # 중복되는 값 출력
         count = {}
         for i in last:
             try: count[i] += 1
             except: count[i]=1
-        print(count)
+        # 빈칸을 위해 불린 사용
+        boo = False
+        for key, value in count.items():
 
-        # 중복되는 값에 대한 리스트를 출력하기
-        count_values = count.values()
-        print(count_values)
+            if value >1:
+                if boo == False:
+                    print("")
+                    f.write(f"\n")
+                    boo = True
+                print(f"{key} {value}")
+                f.write(f"{key}" " " f"{value} \n")
 
-        for j in count_values:
-            if int(j) > 1:
-                print(j, "중복")
-
-
+    
 else:
     print("조건을 벗어났습니다")
 
