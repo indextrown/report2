@@ -65,7 +65,7 @@ if test >= 5 and test <= 1000:
                 # Firstname Last name 문자열 길이 구하기
                 if len(First_name) < 30:
                     if len(Last_name) < 30:
-                        
+
                         #f.write(f'{key} {value}\n')
                         f.write(f'{key}  {value} \n')
                         print(key)
@@ -76,9 +76,6 @@ if test >= 5 and test <= 1000:
                         print("Last name 길이가 30을 초과했습니다")
                 else:
                     print("First name 길이가 30을 초과했습니다")
-
-        #print(f'{key} {First_name:result} {Last_name}')
-            #print(First_name + result_str * "0", "sss")
 
 
 else:

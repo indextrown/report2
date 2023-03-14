@@ -94,19 +94,37 @@ if test >= 5 and test <= 1000:
         for i in last:
             try: count[i] += 1
             except: count[i]=1
+
+        # count 딕셔너리 value 사전적 순차 정리
+        #sorted_count = sorted(count.items(), key=lambda x: x[1])
+        #print(sorted_count)
+        # 정렬한 count 닥셔너리 출력해보기
+        #for dict in sorted_count:
+        #    print(dict[0], dict[1])
+
+        # key 정렬된 딕셔너리 생성
+        sorted_count = sorted(count.items())
+
+        # 정렬된 딕셔너리 출력
+        #for i in sorted_count:
+        #    print(i[0], i[1])
+        print(sorted_count)
+
         # 빈칸을 위해 불린 사용
         boo = False
-        for key, value in count.items():
+        for key, value in sorted_count:
 
             if value >1:
                 if boo == False:
+                    # 빈칸 한번만 주기
                     print("")
                     f.write(f"\n")
                     boo = True
-                print(f"{key} {value}")
+
+
+                #print(f"{key} {value}")
                 f.write(f"{key}" " " f"{value} \n")
 
-    
 else:
     print("조건을 벗어났습니다")
 
