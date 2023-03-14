@@ -78,7 +78,7 @@ if test >= 5 and test <= 1000:
                 if len(Last_name) < 30:
 
                     # print(First_name+(result)*" ", Last_name)
-                    #print(list(dict.keys())[n], First_name + (result) * " ", Last_name)
+                    # print(list(dict.keys())[n], First_name + (result) * " ", Last_name)
                     f.write(f'{list(dict.keys())[n]} {First_name + (result) * " "} {Last_name} \n')
                     n = n + 1
 
@@ -87,13 +87,23 @@ if test >= 5 and test <= 1000:
             else:
                 print("First name 길이가 30을 초과했습니다")
 
-        #print(last)
+
+
 
         count = {}
         for i in last:
             try: count[i] += 1
             except: count[i]=1
         print(count)
+
+        # 중복되는 값에 대한 리스트를 출력하기
+        count_values = count.values()
+        print(count_values)
+
+        for j in count_values:
+            if int(j) > 1:
+                print(j, "중복")
+
 
 else:
     print("조건을 벗어났습니다")
